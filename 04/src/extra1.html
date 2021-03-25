@@ -1,0 +1,24 @@
+
+<body>
+    <div id="root"></div>
+    <link href="./box-styles.css"rel="stylesheet">
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+    <script type="text/babel">
+      
+        const Box = props => <div style={props.style} className={props.className}>{props.children}</div>
+
+        const element = (
+        <div style={{backgroundColor:'green'}} className='Box'>
+
+            <Box style={{backgroundColor: 'lightblue', fontStyle:'italic'}} className='box--small'> small lightblue box </Box>
+
+            <Box style={{backgroundColor: 'pink', fontStyle:'italic'}} className='box--medium'> medium pink box</Box>
+
+            <Box style={{backgroundColor: 'orange', fontStyle:'italic'}} className='box--small'> large orange box</Box>
+        </div>
+        ); 
+      ReactDOM.render(element, document.getElementById('root'))
+    </script>
+  </body> 
