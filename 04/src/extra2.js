@@ -3,7 +3,7 @@ import React from 'react';
 import "./box-styles.css";
 
       
-const Box = props => <div styles={props.style} className={`box--${props.size}`}>{props.children}</div>
+const Box = props => <div styles={props.style} className={` box box--${props.size}`}>{props.children}</div>
 
 function Element1 (){
       return(
