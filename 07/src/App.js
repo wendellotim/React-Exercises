@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 function Greeting() {
     
-    const [name, setName] = useState();
+    const [name, setName] = useState('');
 
     function handleChange(event) {
         setName(event.target.value)

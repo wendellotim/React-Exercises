@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 
-function Greeting(initialName) {
+function Greeting(props) {
     
-    const [initialName, setName] = useState();
+    const [name, setName] = useState(props.initialName);
 
     function handleChange(event) {
         setName(event.target.value)
@@ -15,7 +15,7 @@ function Greeting(initialName) {
                 <label htmlFor="name">Name: </label>
                 <input onChange={handleChange} id="name" />
             </form>
-            {initialName.name ? <strong>Hello {initialName.name}</strong> : "Please type your name"}
+            {name ? <strong>Hello {name}</strong> : "Please type your name"}
         </div>
     );
 }
